@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Video Controls",
+    "version": "3.0",
+    "description": "Control video playback with mouse",
+    "permissions": ["activeTab","tabs","runtime","scripting"],
+    "action": {
+      "default_icon": {
+        "16": "images/icon.jpg"
+      },
+      "default_title": "Video Controls"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "background": {
+      "service_worker": "background.js"
+    }
+  }
+  
